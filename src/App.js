@@ -5,6 +5,8 @@ import {Button} from "react-bootstrap"
 import './App.css'; 
 
 
+
+
 export class App extends Component {
   state = {
     isShow:false
@@ -12,7 +14,7 @@ export class App extends Component {
   state = {
     Person : [
       {
-        imgSrc:"https://i.pinimg.com/originals/5d/57/2d/5d572d653acb9dfc66f45fc42733bb7b.png",
+        imgSrc:"https://images.sk-static.com/images/media/profile_images/artists/8293388/huge_avatar",
         fullName:"Ahmed",
         pio:"cv",
         Profession:"Teacher",
@@ -25,12 +27,13 @@ export class App extends Component {
   }
   render() {
     return (
-      <div className="App" style={{textAlign:"center", marginTop:"100PX"}}>
-        <Button style={{marginTop:"100PX"}} variant="outline-success" size="lg" onClick={this.handleClick}>{this.state.isShow ? "person profile" : "show"}</Button>
+      <div className="App" style={{textAlign:"center", marginTop:"10PX"}}>
+        <Button style={{marginTop:"10PX"}} variant="outline-success" size="lg" onClick={this.handleClick}>{this.state.isShow ? "person profile" : "show"}</Button>
         <br/>
         {
           this.state.isShow ? <Profile Person={this.state.Person}/> : "click the button  to show the  profile"
         }
+      
       </div>
     )
   }
