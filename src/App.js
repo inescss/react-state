@@ -3,6 +3,7 @@ import Profile from './components/profile/Profile'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from "react-bootstrap"
 import './App.css'; 
+import Conteur from './components/conteur/Conteur';
 
 
 
@@ -28,6 +29,7 @@ export class App extends Component {
   render() {
     return (
       <div className="App" style={{textAlign:"center", marginTop:"10PX"}}>
+        <h1>{this.state.isShow ? <Conteur/> :null} </h1>
         <Button style={{marginTop:"10PX"}} variant="outline-success" size="lg" onClick={this.handleClick}>{this.state.isShow ? "person profile" : "show"}</Button>
         <br/>
         {

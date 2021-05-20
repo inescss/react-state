@@ -10,10 +10,7 @@ export class Conteur extends Component {
            
         }
     }
-    
-    state={
-        count:0
-    }
+  
     componentDidMount(){
         console.log("componentDidMount()")
         setInterval(() => {this.increment()}, 1000);
